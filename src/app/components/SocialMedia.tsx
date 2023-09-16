@@ -1,27 +1,21 @@
+
+import { Github, Instagram, Linkedin } from 'lucide-react';
 import React from 'react';
 
-interface SocialMediaProps {
-  socialLinks: {
-    platform: React.ReactNode;
-    url: string;
-  }[];
-  
-}
+const SocialMediaComponent = () => {
+  const socialMediaLinks = [
+    { url: 'https://www.facebook.com/', icon: <Github width={20} height={20}/> },
+    {  url: 'https://www.linkedin.com/in/alicia-olofsson-b23b25242/', icon: <Linkedin width={20} height={20} /> },
+    {  url: 'https://www.instagram.com/aliciaoolofsson', icon: <Instagram width={20} height={20} /> },
+  ];
 
-const SocialMedia: React.FC<SocialMediaProps> = ({ socialLinks }) => {
-    
   return (
     <div>
-      <ul className='flex items-center'>
-        {socialLinks.map((link, index) => (
-          <li key={index} className='border-2 border-solid border-black p-1 rounded-lg mx-2'>
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              {link.platform}
+      <ul className='flex'>
+        {socialMediaLinks.map((link, index) => (
+          <li key={index} className='flex mx-2 border-solid border-black border-2 rounded-lg p-1 '>
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+              {link.icon}
             </a>
           </li>
         ))}
@@ -30,4 +24,4 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ socialLinks }) => {
   );
 };
 
-export default SocialMedia;
+export default SocialMediaComponent;

@@ -1,7 +1,7 @@
 import React from 'react';
-import ProjectCard from '../components/ProjectCard';
-import Underline from '../components/Underline';
-import Heading from '../components/Heading';
+import ProjectCard from './ProjectCard';
+import Underline from './Underline';
+import Heading from './Heading';
 
 interface Project {
   id: number;
@@ -34,9 +34,9 @@ const projectsData: Project[] = [
 
 const App: React.FC = () => {
   return (
-    <div className='flex justify-center items-center flex-col bg-amber-100 py-14'>
+    <div id='projects' className='flex justify-center items-center flex-col bg-amber-100 py-14'>
       <Heading titleName='Projects' />
-      <div className='my-10 lg:flex'>
+      <div className='my-10 md:flex'>
         {projectsData.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}

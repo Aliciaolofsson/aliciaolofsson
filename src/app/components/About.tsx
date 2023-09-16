@@ -1,9 +1,9 @@
 import React from 'react';
-import Heading from '../components/Heading';
+import Heading from './Heading';
 
 export default function About() {
   return (
-    <div className='flex justify-center flex-col items-center p-5 px-10 lg:px-20 '>
+    <div id='about' className='flex justify-center flex-col items-center p-5 px-10 lg:px-20 '>
       <Heading titleName='About me' />
       <section className=' lg:px-24 py-16 '>
         <p className='font-semibold leading-9'>
