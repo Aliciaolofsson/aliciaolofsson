@@ -7,6 +7,7 @@ export default function Home() {
 
   return (
     <div>
+      
       <div className='flex items-center justify-center flex-col py-32'>
         <h2 className='uppercase font-bold lg:text-xl tracking-widest mb-14 '>
           Junior developer

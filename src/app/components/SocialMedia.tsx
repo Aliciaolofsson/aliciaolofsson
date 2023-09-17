@@ -4,9 +4,9 @@ import React from 'react';
 
 const SocialMediaComponent = () => {
   const socialMediaLinks = [
-    { url: 'https://www.facebook.com/', icon: <Github width={20} height={20}/> },
+    { url: 'https://github.com/Aliciaolofsson', icon: <Github width={20} height={20}/> },
     {  url: 'https://www.linkedin.com/in/alicia-olofsson-b23b25242/', icon: <Linkedin width={20} height={20} /> },
-    {  url: 'https://www.instagram.com/aliciaoolofsson', icon: <Instagram width={20} height={20} /> },
+    {  url: 'https://www.instagram.com/aliciaolofssoon', icon: <Instagram width={20} height={20} /> },
   ];
 
   return (
