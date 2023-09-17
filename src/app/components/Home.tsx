@@ -7,22 +7,19 @@ export default function Home() {
 
   return (
     <div>
-      <div className='flex items-center justify-center flex-col p-32'>
+      <div className='flex items-center justify-center flex-col py-32'>
         <h2 className='uppercase font-bold lg:text-xl tracking-widest mb-14 '>
           Junior developer
         </h2>
-        <div className='uppercase flex items-center bg-slate-900 animate-text md:text-7xl font-bold bg-gradient-to-r from-amber-300  via-purple-300  to-amber-300 text-transparent bg-clip-text'>
-          <h1 className='text-9xl'>A</h1>
-          {firstname.map((firstName, index) => (
-            <h1 className='font-bold ' key={index}>
-              {firstName}
-            </h1>
-          ))}
-          <span>&nbsp;</span>
-          <h1 className='text-9xl'>O</h1>
-          {lastname.map((lastName, index) => (
-            <h1 key={index}>{lastName}</h1>
-          ))}
+        <div className='flex-col uppercase tracking-wider flex items-center bg-slate-900 animate-text md:flex-row text-7xl font-bold bg-gradient-to-r from-amber-300  via-purple-300  to-amber-300 text-transparent bg-clip-text'>
+          <h1 className='text-4xl mb-3 md:text-6xl mr-8'>
+            <span className='text-6xl md:text-9xl'>A</span>
+            licia
+          </h1>
+          <h1 className='text-4xl md:text-6xl'>
+            <span className='text-6xl md:text-9xl'>O</span>
+            lofsson
+          </h1>
         </div>
       </div>
     </div>
