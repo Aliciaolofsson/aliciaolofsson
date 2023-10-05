@@ -32,7 +32,7 @@ export default function About() {
           </p>
         </div>
         <p className='my-5'>
-          I&apos;ve learned a lot in this short period, and I&apos;m
+          I&apos;ve learned a lot during this short period, and I&apos;m
           eagerly looking forward to launching my career in the tech industry.
         </p>
       </section>
