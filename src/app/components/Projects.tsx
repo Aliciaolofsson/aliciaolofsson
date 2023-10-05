@@ -19,16 +19,8 @@ const projectsData: Project[] = [
     name: 'EquiSync',
     description:
       'An app for the equestrian community where all trainings are gathered in one place',
-    codeUrl: '',
-    demoUrl: 'ko',
-  },
-  {
-    id: 2, // Changed id to 2 for the second project
-    imageUrl: '/images/favicon.ico',
-    name: 'Linktree',
-    description: 'My own style of linktree',
-    codeUrl: 'hi',
-    demoUrl: 'ko',
+    codeUrl: 'https://github.com/Aliciaolofsson/equisync',
+    demoUrl: 'https://equisync.vercel.app/',
   },
 ];
 
