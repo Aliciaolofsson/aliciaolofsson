@@ -12,7 +12,7 @@ export default function Home() {
           Junior developer
         </h2>
         <div className='flex-col uppercase tracking-wider flex items-center bg-slate-900 animate-text md:flex-row text-7xl font-bold bg-gradient-to-r from-amber-300  via-purple-300  to-amber-300 text-transparent bg-clip-text'>
-          <h1 className='text-6xl md:text-9xl'>Alicia Olofsson</h1>
+          <h1 className='text-6xl md:text-7xl'>Alicia Olofsson</h1>
         </div>
       </div>
     </div>
