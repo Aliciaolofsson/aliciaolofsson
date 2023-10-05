@@ -1,10 +1,7 @@
 import React from 'react';
 
 export default function Home() {
-  const firstname = ['l', 'i', 'c', 'i', 'a'];
-
-  const lastname = ['l', 'o', 'f', 's', 's', 'o', 'n'];
-
+  
   return (
     <div>
       <div className='flex items-center justify-center flex-col py-32'>
