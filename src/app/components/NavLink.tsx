@@ -5,7 +5,6 @@ interface NavLinkProps {
   href: string;
   title: string;
   onClickEvent? : () => boolean;
-
 }
 
 export default function NavLink({ href, title }: NavLinkProps) {

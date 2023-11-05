@@ -28,7 +28,10 @@ const Navbar: React.FC = () => {
         </Link>
         <ul className='hidden md:flex justify-center items-center'>
           {navItems.map((item, index) => (
-            <li key={index} className='text-md font-semibold mx-5'>
+            <li
+              key={index}
+              className='text-md font-semibold mx-3 hover:text-purple-300'
+            >
               <NavLink href={item.link} title={item.label} />
             </li>
           ))}

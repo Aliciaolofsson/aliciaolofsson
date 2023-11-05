@@ -1,12 +1,14 @@
 import React from 'react';
 import HeroSection from './HeroSection';
 import About from './About';
+import ProjectSection from './ProjectSection';
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col'>
-      <div className='container mx-auto py-4 px-12 md:px-12'>
+    <main className='flex flex-col'>
+      <div className='mx-auto py-4 px-12 md:px-20'>
         <HeroSection />
         <About />
+        <ProjectSection /> 
       </div>
     </main>
   );

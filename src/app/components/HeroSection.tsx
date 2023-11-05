@@ -1,12 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import SocialMediaComponent from './SocialMedia';
 import SocialMedia from './SocialMedia';
 
 export default function HeroSection() {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-      <div className='place-self-center'>
+    <section className='grid grid-cols-1 items-center md:grid-cols-2 gap-4'>
+      <div className=''>
         <h1 className='text-4xl mb-4 font-extrabold sm:text-5xl lg:text-6xl'>
           <span className=' bg-gradient-to-r from-amber-300  via-purple-300 to-amber-300 text-transparent bg-clip-text'>
             Hello, I&apos;m{' '}
@@ -20,7 +19,7 @@ export default function HeroSection() {
           <SocialMedia />
         </div>
       </div>
-      <div className='w-72 h-72 place-self-center'>
+      <div className='w-64 h-64 place-self-center'>
         <Image
           src={'/images/heroImg.svg'}
           width={300}

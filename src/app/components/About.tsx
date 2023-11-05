@@ -36,11 +36,11 @@ export default function About() {
   };
   return (
     <section>
-      <div className='md:grid grid-cols-2 gap-8 items-center py-8 px-4 sm:py-16 xl:gap-16 xl:px-16'>
+      <div className=' md:grid grid-cols-2 gap-8 items-center py-8 px-4 sm:py-16 xl:gap-16 xl:px-16'>
         <Image
           src={'/images/aboutImg.svg'}
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           alt={'about me'}
         ></Image>
         <div className='mt-4 md:mt-0 flex flex-col h-full'>
