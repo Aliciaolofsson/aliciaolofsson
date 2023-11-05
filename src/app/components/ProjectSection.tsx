@@ -1,6 +1,5 @@
-import React from 'react';
 import ProjectCard from './ProjectCard';
-
+ 
 const projectData = [
   {
     id: 1,

@@ -1,6 +1,5 @@
 
 import { Github, Instagram, Linkedin } from 'lucide-react';
-import React from 'react';
 
 export default function SocialMedia() {
   const socialMediaLinks = [

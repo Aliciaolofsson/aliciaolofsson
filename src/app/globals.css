@@ -6,3 +6,11 @@
 * {
   font-family: 'Montserrat', sans-serif;
 }
+
+label {
+  font-weight: 600;
+}
+
+input, textarea {
+  font-size: small;
+}

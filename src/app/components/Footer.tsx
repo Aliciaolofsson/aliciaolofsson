@@ -1,4 +1,3 @@
-import React from 'react';
 import SocialMedia from './SocialMedia'; // Adjust the import path
 
 export default function Footer() {
