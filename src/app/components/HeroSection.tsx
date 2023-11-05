@@ -17,8 +17,7 @@ export default function HeroSection() {
         <div>
           <button className='bg-amber-300 py-3 px-4 rounded-lg hover:bg-purple-300 w-full sm:w-auto'>
             <a
-              href='https://drive.google.com/file/d/1kpttqCxchhKZI6SY6gyvFrmAZNkVTHBG/uc?export=download
-              '
+              href='https://drive.google.com/file/d//view?usp=drive_link'
               className='bg-amber-300 py-3 px-4 rounded-lg hover:bg-purple-300 text-white'
             >
               Download CV
