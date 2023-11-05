@@ -35,7 +35,7 @@ export default function About() {
     });
   };
   return (
-    <section>
+    <section id='about'>
       <div className=' md:grid grid-cols-2 gap-8 items-center py-8 px-4 sm:py-16 xl:gap-16 xl:px-16'>
         <Image
           src={'/images/aboutImg.svg'}
@@ -44,7 +44,7 @@ export default function About() {
           alt={'about me'}
         ></Image>
         <div className='mt-4 md:mt-0 flex flex-col h-full'>
-          <h2 className='text-3xl font-bold mb-4'>About me</h2>
+          <h2 className='text-3xl font-bold mb-4'>1.0 About me</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

@@ -7,16 +7,16 @@ import NavLink from './NavLink';
 import MenuOverlay from './MenuOverlay';
 
 const navItems = [
-  { label: 'About', link: '#about' },
-  { label: 'Projects', link: '#projects' },
-  { label: 'Contact', link: '#contact' },
+  { label: '1.0 About', link: '#about' },
+  { label: '2.0 Projects', link: '#projects' },
+  { label: '3.0 Contact', link: '#contact' },
 ];
 
 const Navbar: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className='p-5 md:p-0'>
+    <nav className='px-10 md:px-14 py-2'>
       <div className='flex justify-between items-center md:p-5'>
         <Link href={'/'}>
           <Image

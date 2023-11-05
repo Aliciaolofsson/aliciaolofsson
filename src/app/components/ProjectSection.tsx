@@ -24,8 +24,8 @@ const projectData = [
 
 export default function ProjectSection() {
   return (
-    <div className=' drop-shadow-xl shadow-slate-300  rounded-3xl'>
-      <h2 className='font-bold text-center mb-12 text-3xl'>My Projects</h2>
+    <div id='projects' className='drop-shadow-xl shadow-slate-300  rounded-3xl'>
+      <h2 className='font-bold text-center mb-12 text-3xl'>2.0 My Projects</h2>
       <div className='grid md:grid-cols-3 gap-8 md:gap-12'>
         {projectData.map((project) => (
           <ProjectCard
