@@ -20,7 +20,7 @@ export default function HeroSection() {
           <SocialMedia />
         </div>
       </div>
-      <div className='w-56 h-56 place-self-center bg-amber-300 rounded-full w-28  '>
+      <div className='w-72 h-72 place-self-center'>
         <Image
           src={'/images/heroImg.svg'}
           width={300}
