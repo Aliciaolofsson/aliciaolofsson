@@ -1,26 +1,54 @@
-
+'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import NavLink from './NavLink';
+import MenuOverlay from './MenuOverlay';
 
+const navItems = [
+  { label: 'About', link: '#about' },
+  { label: 'Projects', link: '#projects' },
+  { label: 'Contact', link: '#contact' },
+];
 
 const Navbar: React.FC = () => {
-  const navItems = [
-    { label: 'About', link: '#about' },
-    { label: 'Projects', link: '#projects' },
-    { label: 'Contact', link: '#contact' },
-  ];
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav id='home' className='hidden md:block '>
-      <ul className='flex justify-center items-center pt-7'>
-        {navItems.map((item, index) => (
-          <li key={index} className='text-md font-semibold mx-5'>
-            <Link href={item.link} className=''>
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav className='p-5 md:p-0'>
+      <div className='flex justify-between items-center md:p-5'>
+        <Link href={'/'}>
+          <Image
+            src={'/images/favicon.ico'}
+            alt={'AO'}
+            width={60}
+            height={60}
+          />
+        </Link>
+        <ul className='hidden md:flex justify-center items-center'>
+          {navItems.map((item, index) => (
+            <li key={index} className='text-md font-semibold mx-5'>
+              <NavLink href={item.link} title={item.label} />
+            </li>
+          ))}
+        </ul>
+        <div className='mobile-menu block md:hidden'>
+          <button
+            onClick={() => {
+              setNavbarOpen(!navbarOpen); // Toggle the state
+            }}
+            className='flex items-center p-3'
+          >
+            {navbarOpen ? (
+              <X width={40} height={40} />
+            ) : (
+              <Menu width={40} height={40} />
+            )}
+          </button>
+        </div>
+      </div>
+      {navbarOpen ? <MenuOverlay links={navItems} /> : null}
     </nav>
   );
 };
