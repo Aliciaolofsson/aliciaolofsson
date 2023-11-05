@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className='place-self-center'>
         <h1 className='text-4xl mb-4 font-extrabold sm:text-5xl lg:text-6xl'>
           <span className=' bg-gradient-to-r from-amber-300  via-purple-300 to-amber-300 text-transparent bg-clip-text'>
-            Hello, I&apos;m {' '}
+            Hello, I&apos;m{' '}
           </span>
           Alicia
         </h1>
@@ -16,7 +16,12 @@ export default function HeroSection() {
         </p>
         <div>
           <button className='bg-amber-300 py-3 px-4 rounded-lg hover:bg-purple-300 w-full sm:w-auto'>
-            Download CV
+            <a
+              href='https://drive.google.com/file/d/1kpttqCxchhKZI6SY6gyvFrmAZNkVTHBG/view?usp=drive_link'
+              className='bg-amber-300 py-3 px-4 rounded-lg hover:bg-purple-300 text-white'
+            >
+              Download CV
+            </a>
           </button>
         </div>
       </div>
