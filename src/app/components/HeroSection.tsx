@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import SocialMediaComponent from './SocialMedia';
+import SocialMedia from './SocialMedia';
 
 export default function HeroSection() {
   return (
@@ -15,19 +17,12 @@ export default function HeroSection() {
           I&apos;m a junior frontend developer
         </p>
         <div>
-          <button className='bg-amber-300 py-3 px-4 rounded-lg hover:bg-purple-300 w-full sm:w-auto'>
-            <a
-              href='https://drive.google.com/file/d//view?usp=drive_link'
-              className='bg-amber-300 py-3 px-4 rounded-lg hover:bg-purple-300 text-white'
-            >
-              Download CV
-            </a>
-          </button>
+          <SocialMedia />
         </div>
       </div>
-      <div className='w-56 h-56 place-self-center'>
+      <div className='w-56 h-56 place-self-center bg-amber-300 rounded-full w-28  '>
         <Image
-          src={'/images/favicon.ico'}
+          src={'/images/heroImg.svg'}
           width={300}
           height={300}
           alt={''}
