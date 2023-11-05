@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+    <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
       <div className='place-self-center'>
         <h1 className='text-4xl mb-4 font-extrabold sm:text-5xl lg:text-6xl'>
           <span className=' bg-gradient-to-r from-amber-300  via-purple-300 to-amber-300 text-transparent bg-clip-text'>
