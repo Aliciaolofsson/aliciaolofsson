@@ -1,14 +1,17 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { POST } from '../api/send/route';
 interface EmailSection {
   cols: number;
   rows: number;
 }
 
+
 export default function EmailSection() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
+    POST
     e.preventDefault();
     const target = e.target as typeof e.target & {
       email: { value: string };
