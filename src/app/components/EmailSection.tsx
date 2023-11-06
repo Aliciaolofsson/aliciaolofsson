@@ -1,16 +1,52 @@
+'use client';
+import React, { useState } from 'react';
 interface EmailSection {
   cols: number;
   rows: number;
 }
+
 export default function EmailSection() {
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const target = e.target as typeof e.target & {
+      email: { value: string };
+      title: { value: string };
+      message: { value: string };
+    };
+    const data = {
+      email: target.email.value,
+      title: target.title.value,
+      message: target.message.value,
+    };
+    const JSONdata = JSON.stringify(data);
+    const endpoint = '/api/send';
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSONdata,
+    };
+    const response = await fetch(endpoint, options);
+    const resData = await response.json();
+
+    if (response.status === 200) {
+      console.log('Message sent.');
+      setEmailSubmitted(true);
+    }
+  };
+
   return (
     <section className='my-20'>
-        <h1 id="contact" className="text-center font-bold text-3xl mb-14">3.0 Contact me</h1>
+      <h1 id='contact' className='text-center font-bold text-3xl mb-14'>
+        3.0 Contact me
+      </h1>
       <div className='grid md:grid-cols-2 py-24 gap-4 rounded-xl bg-purple-100 px-12'>
         <div>
-          <p className="my-4">I&apos;m open for work</p>
+          <p className='my-4'>I&apos;m open for work</p>
         </div>
-        <form className='flex flex-col gap-2'>
+        <form className='flex flex-col gap-2' onSubmit={handleSubmit}>
           <label htmlFor='email' className='block'>
             Email
           </label>
@@ -21,7 +57,7 @@ export default function EmailSection() {
             placeholder='example@domain.com'
             className='p-2 rounded-lg'
           />
-          <label htmlFor='Subject' className='block'>
+          <label htmlFor='title' className='block'>
             Title
           </label>
           <input
@@ -45,6 +81,9 @@ export default function EmailSection() {
           >
             Send Message
           </button>
+          {emailSubmitted && (
+            <p className='text-green-400'>Email was sent successfully!</p>
+          )}
         </form>
       </div>
     </section>
