@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 interface EmailSection {
   cols: number;
   rows: number;
@@ -42,9 +43,19 @@ export default function EmailSection() {
       <h1 id='contact' className='text-center font-bold text-3xl mb-14'>
         3.0 Contact me
       </h1>
-      <div className='grid md:grid-cols-2 py-24 gap-4 rounded-xl bg-purple-100 px-12'>
-        <div>
-          <p className='my-4'>I&apos;m open for work</p>
+      <div className='grid md:grid-cols-2 py-12 gap-4 rounded-xl bg-purple-100 px-12'>
+        <div className=''>
+          <p className='my-4 font-semibold'>Hey there! 👋🏻</p>
+          <p className=''>
+            I&apos;m open for work or opportunities to learn more about
+            front-end development.
+          </p>
+          <Image
+            src={'/images/aboutImg.svg'}
+            width={300}
+            height={300}
+            alt={'about me'}
+          ></Image>
         </div>
         <form className='flex flex-col gap-2' onSubmit={handleSubmit}>
           <label htmlFor='email' className='block'>
