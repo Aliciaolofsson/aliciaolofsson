@@ -1,7 +1,8 @@
-import About from "./components/About";
-import EmailSection from "./components/EmailSection";
-import HeroSection from "./components/HeroSection";
-import ProjectSection from "./components/ProjectSection";
+import About from './components/About';
+import EmailSection from './components/EmailSection';
+import Footer from './components/Footer';
+import HeroSection from './components/HeroSection';
+import ProjectSection from './components/ProjectSection';
 
 export default function Home() {
   return (
@@ -9,9 +10,10 @@ export default function Home() {
       <div className='mx-auto py-4 px-12 md:px-20'>
         <HeroSection />
         <About />
-        <ProjectSection /> 
+        <ProjectSection />
         <EmailSection />
       </div>
+      <Footer />
     </main>
   );
 }
