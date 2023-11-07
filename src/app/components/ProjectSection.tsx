@@ -8,7 +8,7 @@ const projectData = [
     description: 'A webbapp for the equestrian community',
     image: 'images/aboutImg.svg',
     gitUrl: 'https://github.com/Aliciaolofsson/equisync',
-    previewUrl: '/https://equisync.vercel.app/',
+    previewUrl: 'https://equisync.vercel.app/',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const projectData = [
     stack: 'Next js, tailwindcss, resend',
     description: 'Website for a small vaccination clinic',
     image: 'images/heroImg.svg',
-    gitUrl: '/github.com/Aliciaolofsson/sskpraktikenosd',
+    gitUrl: 'https://github.com/Aliciaolofsson/sskpraktikenosd',
     previewUrl: '/vercel.com',
   },
   {
@@ -25,8 +25,8 @@ const projectData = [
     stack: 'Next js, tailwindcss, resend',
     description: 'This portfolio',
     image: 'images/heroImg.svg',
-    gitUrl: '/',
-    previewUrl: '/aliciaolofsson.com',
+    gitUrl: 'https://github.com/Aliciaolofsson/aliciaolofsson',
+    previewUrl: 'https://aliciaolofsson.com/',
   },
 ];
 
