@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navItems} /> : null}
+      {navbarOpen ? <MenuOverlay toggleNavbar={setNavbarOpen} links={navItems} /> : null}
     </nav>
   );
 };

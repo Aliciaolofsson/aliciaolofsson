@@ -6,11 +6,13 @@ interface ProjectCardProps {
   description: string;
   gitUrl: string;
   previewUrl: string;
+  stack: string;
 }
 
 export default function ProjectCard({
   imgUrl,
   title,
+  stack,
   description,
   previewUrl,
   gitUrl,
@@ -32,10 +34,11 @@ export default function ProjectCard({
           </div>
         </div>
       </div>
-      <div className='bg-white py-3 px-4 rounded-b-xl'>
-        <h5 className='font-xl font-semibold mb-2'>{title}</h5>
+      <div className='bg-white flex flex-col py-3 px-4 rounded-b-xl'>
+        <h5 className='font-xl font-semibold my-2'>{title}</h5>
         <p>{description}</p>
+        <p className='italic mt-2 text-sm'>{stack}</p>
       </div>
-    </div>
+    </div> 
   );
 }

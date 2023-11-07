@@ -1,16 +1,14 @@
 'use client';
-import React, { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import Image from 'next/image';
-import { POST } from '../api/send/route';
 interface EmailSection {
   cols: number;
   rows: number;
 }
 
-
 export default function EmailSection() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const target = e.target as typeof e.target & {
       email: { value: string };
@@ -22,6 +20,7 @@ export default function EmailSection() {
       title: target.title.value,
       message: target.message.value,
     };
+
     const JSONdata = JSON.stringify(data);
     const endpoint = '/api/send';
     const options = {
@@ -47,10 +46,10 @@ export default function EmailSection() {
       </h1>
       <div className='grid md:grid-cols-2 py-12 gap-4 rounded-xl bg-purple-100 px-12'>
         <div className=''>
-          <p className='my-4 font-semibold'>Hey there! 👋🏻</p>
+          <p className='font-semibold'>Hi there! 👋🏻</p>
           <p className=''>
             I&apos;m open for work or opportunities to learn more about
-            front-end development.
+            front-end development. Feel free to send me an email!
           </p>
           <Image
             src={'/images/aboutImg.svg'}
@@ -61,7 +60,7 @@ export default function EmailSection() {
         </div>
         <form className='flex flex-col gap-2' onSubmit={handleSubmit}>
           <label htmlFor='email' className='block'>
-            Email
+            Email:
           </label>
           <input
             type='email'
@@ -71,7 +70,7 @@ export default function EmailSection() {
             className='p-2 rounded-lg'
           />
           <label htmlFor='title' className='block'>
-            Title
+            Title:
           </label>
           <input
             type='text'
@@ -80,7 +79,7 @@ export default function EmailSection() {
             placeholder='ex. Saying hello'
             className='p-2 rounded-lg'
           />
-          <label htmlFor='message'>Message</label>
+          <label htmlFor='message'>Message:</label>
           <textarea
             name='message'
             id='message'
@@ -90,12 +89,12 @@ export default function EmailSection() {
           ></textarea>
           <button
             type='submit'
-            className='mt-3 bg-white rounded-md p-2 font-semibold text-sm hover:bg-black hover:text-white'
+            className='mt-3 bg-white border border-black rounded-md p-2 font-semibold text-sm hover:bg-black hover:text-white'
           >
             Send Message
           </button>
           {emailSubmitted && (
-            <p className='text-green-400'>Email was sent successfully!</p>
+            <p className='text-xs mt-2 italic'>Email sent sucessfully! </p>
           )}
         </form>
       </div>
